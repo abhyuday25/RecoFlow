@@ -41,20 +41,3 @@ curl "http://localhost:8000/recommend/1?model=hybrid"
 curl "http://localhost:8000/recommend/1?model=svd"
 curl "http://localhost:8000/recommend/1?model=ncf"
 ```
-
-Available model query values:
-
-- `hybrid`
-- `user`
-- `item`
-- `svd`
-- `ncf`
-
-## Data
-
-The repository includes a compact MovieLens-shaped sample dataset in:
-
-- `data/raw/ratings.csv`
-- `data/raw/movies.csv`
-
-Swap these files with the full MovieLens dataset to scale up without changing the code.
