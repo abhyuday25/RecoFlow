@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamStack Recs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="noise"></div>
+
+    <main class="shell">
+      <section class="hero panel">
+        <div class="hero-copy">
+          <p class="eyebrow">STREAMSTACK RECS</p>
+          <h1>Pick a user. Switch the model. Pull a feed that feels elite.</h1>
+          <p class="hero-text">
+            A Netflix-style recommendation playground powered by collaborative filtering, matrix
+            factorization, and neural embeddings.
+          </p>
+          <div class="hero-actions">
+            <a href="#recommender" class="button primary">Launch recommender</a>
+            <a href="/docs" class="button ghost">Open API docs</a>
+          </div>
+        </div>
+
+        <div class="hero-glance">
+          <div class="glance-card">
+            <span class="glance-label">Mode</span>
+            <strong id="heroModel">Hybrid vibe</strong>
+          </div>
+          <div class="glance-card">
+            <span class="glance-label">Top picks</span>
+            <strong>10 movies</strong>
+          </div>
+          <div class="glance-card">
+            <span class="glance-label">Backend</span>
+            <strong>FastAPI live</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel control-panel" id="recommender">
+          <div class="section-heading">
+            <p class="eyebrow">RECOMMENDER</p>
+            <h2>Curate a watchlist in one tap</h2>
+          </div>
+
+          <div class="form-grid">
+            <label class="field">
+              <span>User ID</span>
+              <select id="userSelect"></select>
+            </label>
+
+            <label class="field">
+              <span>Quick jump</span>
+              <input id="userInput" type="number" min="1" placeholder="Type a user id" />
+            </label>
+          </div>
+
+          <div class="model-row">
+            <span class="model-label">Choose your engine</span>
+            <div id="modelChips" class="chip-row"></div>
+          </div>
+
+          <div class="cta-row">
+            <button id="recommendButton" class="button primary">Generate recommendations</button>
+            <button id="shuffleButton" class="button secondary">Surprise me</button>
+          </div>
+
+          <p id="statusText" class="status-text">Loading app data...</p>
+        </div>
+
+        <aside class="panel metrics-panel">
+          <div class="section-heading">
+            <p class="eyebrow">MODEL SCORES</p>
+            <h2>Leaderboard</h2>
+          </div>
+          <div id="metricsGrid" class="metrics-grid"></div>
+        </aside>
+      </section>
+
+      <section class="panel results-panel">
+        <div class="results-header">
+          <div>
+            <p class="eyebrow">FOR YOU</p>
+            <h2 id="resultsTitle">Recommendations incoming</h2>
+          </div>
+          <div class="results-badge" id="resultsBadge">Waiting for request</div>
+        </div>
+        <div id="resultsGrid" class="results-grid"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>

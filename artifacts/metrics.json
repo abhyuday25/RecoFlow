@@ -1,0 +1,22 @@
+{
+  "evaluations": [
+    {
+      "model_name": "collaborative_filtering",
+      "rmse": 3.223832201403351,
+      "precision_at_k": 0.13999999999999999,
+      "recall_at_k": 1.0
+    },
+    {
+      "model_name": "matrix_factorization_svd",
+      "rmse": 1.7027563693574754,
+      "precision_at_k": 0.13999999999999999,
+      "recall_at_k": 1.0
+    },
+    {
+      "model_name": "neural_collaborative_filtering",
+      "rmse": 0.5584620340483626,
+      "precision_at_k": 0.13999999999999999,
+      "recall_at_k": 1.0
+    }
+  ]
+}
