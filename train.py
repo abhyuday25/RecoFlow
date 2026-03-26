@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from app.services import RecommendationService
 
-
 def main() -> None:
     service = RecommendationService()
     evaluations = service.train_and_evaluate()
